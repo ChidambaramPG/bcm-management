@@ -43,7 +43,6 @@ export default {
   name: "TopBar",
   methods:{
     toggleSidebar(){
-      console.log("clicked");
       store.commit("toggleSidebar");
     },
     convertName(name){

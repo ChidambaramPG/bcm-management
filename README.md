@@ -1,29 +1,23 @@
-# sales
+Note: Work in progress...
 
-## Project setup
-```
-yarn install
-```
+Application to manage business cards and brochures
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+Features
+1. Add brochures and business card details
+2. Image upload
+3. Role based data access
+4. Tags and categories
+5. Group emails
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+Specifications
+1. Built using VueJS
+2. Progressive Web App
+3. Offline capablities
+4. Authentication using firebase
+5. Cloud database (Firestore)
+6. Realtime updates
 
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Future plans
+1. Machine learning to detect text 
+2. Automatic classification of cards
+3. Automatic group mails

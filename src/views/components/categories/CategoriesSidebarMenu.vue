@@ -1,14 +1,14 @@
 <template>
   <button 
     class="list-group-item active-section"
-    @click.prevent="() => setContentLayout(name)"
-    v-if="activePage == name"
+    @click.prevent="() => setCategoriesTable(name)"
+    v-if="activeCategory == name"
   >
     {{ convertName(name) }}
   </button>
   <button 
     class="list-group-item list-group-item-action"
-    @click.prevent="() => setContentLayout(name)"
+    @click.prevent="() => setCategoriesTable(name)"
     v-else
   >
     {{ convertName(name) }}
@@ -17,20 +17,20 @@
 <script>
 import store from '../../../store/index.js';
 export default {
-  name: "SidebarMenuItem",
+  name: "CategoriesSidebarMenu",
   methods: {
-    setContentLayout: page => {
-      // console.log("setting page", page);
-      store.commit("setActivePage", page);
-    },
+    
     convertName(name){
       return name.charAt(0).toUpperCase()+name.slice(1)
+    },
+    setCategoriesTable(){
+
     }
   },
   props: ["name"],
   computed:{
-      activePage(){
-          return store.state.activePage;
+      activeCategory(){
+          return store.state.categorySubTag;
       }
   }
 };

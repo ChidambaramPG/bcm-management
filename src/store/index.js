@@ -21,7 +21,7 @@ export default new Vuex.Store({
     newCardsModalVisible:false,
     editCardsModalVisible:false,
     deleteCardsModalVisible:false,
-
+    categorySubTag:'uncategorised'
 
   },
   mutations: {

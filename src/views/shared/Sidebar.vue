@@ -44,7 +44,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 a.sidebar-heading {
   display: block;
   height: 80px;

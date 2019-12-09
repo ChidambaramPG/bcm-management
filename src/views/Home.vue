@@ -9,6 +9,7 @@
         <brochure v-else-if="activePage==='brochures'"/>
         <cards v-else-if="activePage==='cards'"/>
         <users v-else-if="activePage==='users'"/>
+        <categories v-else-if="activePage==='categories'"/>
       </div>
     </div>
     <div class="row" v-else>
@@ -17,6 +18,7 @@
         <brochure v-else-if="activePage==='brochures'"/>
         <cards v-else-if="activePage==='cards'"/>
         <users v-else-if="activePage==='users'"/>
+        <categories v-else-if="activePage==='categories'"/>
       </div>
     </div>
     <div class="row">
@@ -33,6 +35,7 @@ import Dashboard from './pages/Dashboard.vue';
 import Brochure from './pages/Brochures.vue';
 import Cards from './pages/Cards.vue';
 import Users from './pages/Users.vue';
+import Categories from './pages/Categories.vue';
 
 import AllModals from './shared/AllModals.vue';
 import store from '../store/index.js';
@@ -45,7 +48,8 @@ export default {
     Brochure,
     AllModals,
     Cards,
-    Users
+    Users,
+    Categories
   },
   computed:{
     showSidebar(){

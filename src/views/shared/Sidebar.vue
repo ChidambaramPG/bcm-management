@@ -5,7 +5,7 @@
     </a>
     <ul class="list-group list-group-flush sidebar-list">
       <sidebar-menu-item name="dashboard"/>
-      <sidebar-menu-item name="brochures"/>
+      <!-- <sidebar-menu-item name="brochures"/> -->
       <sidebar-menu-item name="cards"/>
       <sidebar-menu-item name="users"/>
       <sidebar-menu-item name="categories"/>

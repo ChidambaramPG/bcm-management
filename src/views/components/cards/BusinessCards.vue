@@ -150,7 +150,7 @@
 <script>
 import store from '../../../store/index.js';
 export default {
-  name: "Business Cards",
+  name: "BusinessCards",
   methods:{
     showEditCardsModal(){
       store.commit('toggleEditCardModal')

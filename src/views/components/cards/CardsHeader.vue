@@ -2,11 +2,17 @@
     <div class="row header-row">
         
         <div class="col-md-2">
-            <button class="btn btn-block rounded btn-new" @click="showAddNewCardModal">
+            <button class="btn btn-block rounded btn-new" @click="showAddNewCardSection">
                 <i class="fas fa-plus-circle"></i><span> Add New</span>
             </button>
             
         </div>
+        <!-- <div class="col-md-2">
+            <button class="btn btn-block rounded btn-new" @click="showAddNewCardModal">
+                <i class="fas fa-camera"></i><span> Open Camera</span>
+            </button>
+            
+        </div> -->
         
     </div>
 
@@ -18,6 +24,9 @@ export default {
     methods:{
         showAddNewCardModal(){
             store.commit('toggleNewCardModal')
+        },
+        showAddNewCardSection(){
+            store.commit('setCardsSection','add');
         }
     }
 }

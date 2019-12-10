@@ -11,7 +11,7 @@
           <div class="row">
             <div class="col-md-2">
               <ul class="list-group list-group-flush sidebar-list">
-                <CategoriesSidebarMenu name="uncategorised" />
+                <CategoriesSidebarMenu name="all" />
                 <CategoriesSidebarMenu name="events" />
                 <!-- <sidebar-menu-item name="brochures"/> -->
                 <CategoriesSidebarMenu name="high profile" />

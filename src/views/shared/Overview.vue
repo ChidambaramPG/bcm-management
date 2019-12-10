@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <div class="col-lg-3 col-md-6 overview-card">
+        <div class="col-lg-4 col-md-6 overview-card">
             <div class="card">
                 <div class="card-header">
                     Business Cards
@@ -11,7 +11,7 @@
             </div>  
         </div>
 
-        <div class="col-lg-3 col-md-6 overview-card">
+        <!-- <div class="col-lg-3 col-md-6 overview-card">
             <div class="card">
                 <div class="card-header">
                     Brochures
@@ -20,9 +20,9 @@
                     {{businessCardCount}} <i class="fas fa-arrow-up fa-xs"></i>
                 </div>
             </div>  
-        </div>
+        </div> -->
 
-        <div class="col-lg-3 col-md-6 overview-card">
+        <div class="col-lg-4 col-md-6 overview-card">
             <div class="card">
                 <div class="card-header">
                     Categories
@@ -33,7 +33,7 @@
             </div>  
         </div>
 
-        <div class="col-lg-3 col-md-6 overview-card">
+        <div class="col-lg-4 col-md-6 overview-card">
             <div class="card">
                 <div class="card-header">
                     Users

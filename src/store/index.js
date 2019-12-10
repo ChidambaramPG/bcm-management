@@ -13,15 +13,25 @@ export default new Vuex.Store({
     businessCards:[],
     categories:[],
     users:[],
+
+
     sidebarVisible:true,
+
+    // page views
     activePage:'dashboard',
+    categorySubTag:'all',
+    cardsSecton:'table',
+
+    // modal views
     newBrochureModalVisible:false,
     editBrochureModalVisible:false,
     deleteBrochureModalVisible:false,
     newCardsModalVisible:false,
     editCardsModalVisible:false,
     deleteCardsModalVisible:false,
-    categorySubTag:'uncategorised'
+    newCategoryModalVisible:false,
+    
+
 
   },
   mutations: {
@@ -50,6 +60,18 @@ export default new Vuex.Store({
     toggleDeleteCardModal: state => {
       state.deleteCardsModalVisible = !state.deleteCardsModalVisible;
     },
+    toggleNewCategoryModal: state => {
+      state.newCategoryModalVisible = !state.newCategoryModalVisible;
+    },
+    toggleNewCardSection: state => {
+      state.cardsSecton = 'add'
+    },
+    toggleEditCard: state => {
+      state.cardsSecton = 'edit'
+    },
+    setCardsSection: (state,payload) => {
+      state.cardsSecton = payload;
+    }
   },
   actions: {
 

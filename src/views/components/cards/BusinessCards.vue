@@ -30,8 +30,8 @@
                 <td>555-777-3434</td>
                 <td>Administrator</td>
                 <td>
-                  <a href="" @click.prevent="()=>showEditCardsModal()"><i class="fas fa-edit text-success"></i></a>
-                  <a href="" @click.prevent="()=>showDeleteCardsModal()"><i class="fas fa-times text-danger"></i></a>
+                  <a href="" @click.prevent="()=>showEditCard()"><i class="fas fa-edit text-success"></i></a>
+                  <a href="" @click.prevent="()=>showDeleteCardModal()"><i class="fas fa-times text-danger"></i></a>
                 </td>
                 <td>
                     <p><span class="badge badge-info">Laptop Service</span> </p>
@@ -50,8 +50,8 @@
                 <td>555-777-3434</td>
                 <td>Administrator</td>
                 <td>
-                  <a href="" @click.prevent="()=>showEditCardsModal()"><i class="fas fa-edit text-success"></i></a>
-                  <a href="" @click.prevent="()=>showDeleteCardsModal()"><i class="fas fa-times text-danger"></i></a>
+                  <a href="" @click.prevent="()=>showEditCard()"><i class="fas fa-edit text-success"></i></a>
+                  <a href="" @click.prevent="()=>showDeleteCardModal()"><i class="fas fa-times text-danger"></i></a>
                 </td>
                 <td>
                     <p><span class="badge badge-info">Laptop Service</span> </p>
@@ -70,8 +70,8 @@
                 <td>555-777-3434</td>
                 <td>Administrator</td>
                 <td>
-                  <a href="" @click.prevent="()=>showEditCardsModal()"><i class="fas fa-edit text-success"></i></a>
-                  <a href="" @click.prevent="()=>showDeleteCardsModal()"><i class="fas fa-times text-danger"></i></a>
+                  <a href="" @click.prevent="()=>showEditCard()"><i class="fas fa-edit text-success"></i></a>
+                  <a href="" @click.prevent="()=>showDeleteCardModal()"><i class="fas fa-times text-danger"></i></a>
                 </td>
                 <td>
                     <p><span class="badge badge-info">Laptop Service</span> </p>
@@ -90,8 +90,8 @@
                 <td>555-777-3434</td>
                 <td>Administrator</td>
                 <td>
-                  <a href="" @click.prevent="()=>showEditCardsModal()"><i class="fas fa-edit text-success"></i></a>
-                  <a href="" @click.prevent="()=>showDeleteCardsModal()"><i class="fas fa-times text-danger"></i></a>
+                  <a href="" @click.prevent="()=>showEditCard()"><i class="fas fa-edit text-success"></i></a>
+                  <a href="" @click.prevent="()=>showDeleteCardModal()"><i class="fas fa-times text-danger"></i></a>
                 </td>
                 <td>
                     <p><span class="badge badge-info">Laptop Service</span> </p>
@@ -110,14 +110,15 @@
                 <td>555-777-3434</td>
                 <td>Administrator</td>
                 <td>
-                  <a href="" @click.prevent="()=>showEditCardsModal()"><i class="fas fa-edit text-success"></i></a>
-                  <a href="" @click.prevent="()=>showDeleteCardsModal()"><i class="fas fa-times text-danger"></i></a>
+                  <a href="" @click.prevent="()=>showEditCard()"><i class="fas fa-edit text-success"></i></a>
+                  <a href="" @click.prevent="()=>showDeleteCardModal()"><i class="fas fa-times text-danger"></i></a>
                 </td>
                 <td>
                     <p><span class="badge badge-info">Laptop Service</span> </p>
                     <p><span class="badge badge-info">Mobile Service</span></p>
                 </td>
               </tr>
+             
               
             </tbody>
           </table>
@@ -158,6 +159,9 @@ export default {
     showDeleteCardsModal(){
       store.commit('toggleDeleteCardModal')
     },
+    showEditCard(){
+      store.commit('setCardsSection','edit');
+    }
 
   }
 };

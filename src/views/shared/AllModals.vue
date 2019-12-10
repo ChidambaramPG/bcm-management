@@ -6,6 +6,7 @@
         <delete-brochure-modal v-if='showDeleteBrochureModal' :status='showDeleteBrochureModal' />
         <edit-card-modal v-if="showEditCardModal" :status='showEditCardModal' />
         <delete-card-modal v-if='showDeleteCardModal' :status='showDeleteCardModal' />
+        <new-category-modal v-if="showNewCategoryModal" :status="showNewCategoryModal"/>
     </div>
 </template>
 <script>
@@ -15,6 +16,7 @@ import EditBrochureModal from '../components/modal/EditBrochureModal.vue';
 import DeleteBrochureModal from '../components/modal/DeleteBrochureModal.vue';
 import EditCardModal from '../components/modal/EditCardModal.vue';
 import DeleteCardModal from '../components/modal/DeleteCardModal.vue';
+import NewCategoryModal from '../components/modal/NewCategoryModal.vue';
 import store from '../../store/index.js';
 export default {
     name:'AllModals',
@@ -24,7 +26,8 @@ export default {
         EditBrochureModal,
         DeleteBrochureModal,
         EditCardModal,
-        DeleteCardModal
+        DeleteCardModal,
+        NewCategoryModal
     },
     computed:{
         showNewBrochureModal(){
@@ -44,6 +47,9 @@ export default {
         },
         showDeleteCardModal(){
             return store.state.deleteCardsModalVisible;
+        },
+        showNewCategoryModal(){
+            return store.state.newCategoryModalVisible;
         },
     }
 }

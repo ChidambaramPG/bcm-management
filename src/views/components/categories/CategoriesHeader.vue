@@ -2,7 +2,7 @@
     <div class="row header-row">
         
         <div class="col-md-2">
-            <button class="btn btn-block rounded btn-new" @click="showAddNewCardModal">
+            <button class="btn btn-block rounded btn-new" @click="showAddNewCategoryModal">
                 <i class="fas fa-plus-circle"></i><span> Add New</span>
             </button>
             
@@ -16,8 +16,8 @@ import store from '../../../store/index.js';
 export default {
     name:'CategoriesHeader',
     methods:{
-        showAddNewCardModal(){
-            store.commit('toggleNewCardModal')
+        showAddNewCategoryModal(){
+            store.commit('toggleNewCategoryModal')
         }
     }
 }

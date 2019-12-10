@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     setContentLayout: page => {
-      console.log("setting page", page);
+      // console.log("setting page", page);
       store.commit("setActivePage", page);
     }
   },

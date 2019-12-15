@@ -1,8 +1,8 @@
 <template>
     <div class="row header-row">
         
-        <div class="col-md-2">
-            <button class="btn btn-block rounded btn-new" @click="showAddNewCategoryModal">
+        <div class="col-md-2" v-if="getCategorySection == 'table'">
+            <button class="btn btn-block rounded btn-new" @click="setCategorySection">
                 <i class="fas fa-plus-circle"></i><span> Add New</span>
             </button>
             
@@ -18,8 +18,16 @@ export default {
     methods:{
         showAddNewCategoryModal(){
             store.commit('toggleNewCategoryModal')
+        },
+        setCategorySection(){
+            store.commit('setCategorySection','new');
+        },
+    },
+    computed: {
+        getCategorySection(){
+            return store.state.categorySection;
         }
-    }
+    },
 }
 </script>
 <style scoped>

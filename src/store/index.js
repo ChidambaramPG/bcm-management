@@ -21,6 +21,8 @@ export default new Vuex.Store({
     activePage:'dashboard',
     categorySubTag:'all',
     cardsSecton:'table',
+    usersSection:'table',
+    categorySection:'table',
 
     // modal views
     newBrochureModalVisible:false,
@@ -39,7 +41,6 @@ export default new Vuex.Store({
       state.sidebarVisible = !state.sidebarVisible
     },
     setActivePage: (state,payload) => {
-      console.log("setting active page")
       state.activePage = payload;
     },
     toggleNewBrochureModal: state=>{
@@ -71,6 +72,12 @@ export default new Vuex.Store({
     },
     setCardsSection: (state,payload) => {
       state.cardsSecton = payload;
+    },
+    setUsersSection:(state,payload) => {
+      state.usersSection = payload;
+    },
+    setCategorySection: (state,payload) => {
+      state.categorySection = payload;
     }
   },
   actions: {

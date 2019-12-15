@@ -116,7 +116,7 @@
         <div class="row">
           <img
             class="card-img img-responsive"
-            src="https://www.digitalprinting.co.uk/media/images/products/slides/2/business-cards-1.jpg"
+            src="../../../assets/img/card.jpg"
           />
         </div>
 

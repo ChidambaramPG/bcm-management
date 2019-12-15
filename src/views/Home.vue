@@ -1,44 +1,48 @@
 <template>
   <div class="home">
     <div class="row" v-if="showSidebar">
-      <div class="col-md-2 sidebar-content" >
-        <sidebar/>
+      <div class="col-md-2 sidebar-content">
+        <sidebar />
       </div>
       <div class="col-md-10 page-content border-left">
-        <dashboard v-if="activePage==='dashboard'"/>
-        <brochure v-else-if="activePage==='brochures'"/>
-        <cards v-else-if="activePage==='cards'"/>
-        <users v-else-if="activePage==='users'"/>
-        <categories v-else-if="activePage==='categories'"/>
+        <dashboard v-if="activePage === 'dashboard'" />
+        <brochure v-else-if="activePage === 'brochures'" />
+        <cards v-else-if="activePage === 'cards'" />
+        <users v-else-if="activePage === 'users'" />
+        <categories v-else-if="activePage === 'categories'" />
+        <profile v-else-if="activePage == 'profile'"/>
+        <settings v-else-if="activePage == 'settings'"/>
       </div>
     </div>
     <div class="row" v-else>
       <div class="col-md-12 page-content border-left">
-        <dashboard v-if="activePage==='dashboard'"/>
-        <brochure v-else-if="activePage==='brochures'"/>
-        <cards v-else-if="activePage==='cards'"/>
-        <users v-else-if="activePage==='users'"/>
-        <categories v-else-if="activePage==='categories'"/>
+        <dashboard v-if="activePage === 'dashboard'" />
+        <brochure v-else-if="activePage === 'brochures'" />
+        <cards v-else-if="activePage === 'cards'" />
+        <users v-else-if="activePage === 'users'" />
+        <categories v-else-if="activePage === 'categories'" />
+        <profile v-else-if="activePage == 'profile'"/>
+        <settings v-else-if="activePage == 'settings'"/>
       </div>
     </div>
     <div class="row">
-      <all-modals/>
+      <all-modals />
     </div>
-    
-        
   </div>
 </template>
 
 <script>
 import Sidebar from "./shared/Sidebar.vue";
-import Dashboard from './pages/Dashboard.vue';
-import Brochure from './pages/Brochures.vue';
-import Cards from './pages/Cards.vue';
-import Users from './pages/Users.vue';
-import Categories from './pages/Categories.vue';
+import Dashboard from "./pages/Dashboard.vue";
+import Brochure from "./pages/Brochures.vue";
+import Cards from "./pages/Cards.vue";
+import Users from "./pages/Users.vue";
+import Categories from "./pages/Categories.vue";
+import Profile from './pages/Profile.vue';
+import Settings from './pages/Settings.vue';
 
-import AllModals from './shared/AllModals.vue';
-import store from '../store/index.js';
+import AllModals from "./shared/AllModals.vue";
+import store from "../store/index.js";
 
 export default {
   name: "home",
@@ -49,13 +53,15 @@ export default {
     AllModals,
     Cards,
     Users,
-    Categories
+    Categories,
+    Profile,
+    Settings
   },
-  computed:{
-    showSidebar(){
+  computed: {
+    showSidebar() {
       return store.state.sidebarVisible;
     },
-    activePage(){
+    activePage() {
       return store.state.activePage;
     }
   }
@@ -63,13 +69,11 @@ export default {
 </script>
 
 <style scoped>
-
-.page-content{
+.page-content {
   padding: 0px;
 }
 
-.sidebar-content{
-  padding:0px;
+.sidebar-content {
+  padding: 0px;
 }
-
 </style>

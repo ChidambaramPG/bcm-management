@@ -2,7 +2,7 @@
     <div class="row header-row">
         
         <div class="col-md-2">
-            <button class="btn btn-block rounded btn-new" @click="showAddNewCardModal">
+            <button class="btn btn-block rounded btn-new" @click="showNewCardSection">
                 <i class="fas fa-plus-circle"></i><span> Add New</span>
             </button>
             
@@ -18,6 +18,9 @@ export default {
     methods:{
         showAddNewCardModal(){
             store.commit('toggleNewCardModal')
+        },
+        showNewCardSection(){
+            store.commit('setUsersSection','add');
         }
     }
 }
